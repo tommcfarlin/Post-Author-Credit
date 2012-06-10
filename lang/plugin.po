@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Post Author Credit\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-10 12:29-0500\n"
-"PO-Revision-Date: 2012-06-10 12:29-0500\n"
+"POT-Creation-Date: 2012-06-10 15:11-0500\n"
+"PO-Revision-Date: 2012-06-10 15:11-0500\n"
 "Last-Translator: Tom McFarlin <tom@tommcfarlin.com>\n"
 "Language-Team: Tom McFarlin <tom@tommcfarlin.com>\n"
 "MIME-Version: 1.0\n"
@@ -16,15 +16,15 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../plugin.php:120
+#: ../plugin.php:123
 msgid "Post Author Credit"
 msgstr ""
 
-#: ../plugin.php:180
+#: ../plugin.php:183
 msgid "Display <a href=\"profile.php\">author name &amp; email</a>?"
 msgstr ""
 
-#: ../plugin.php:201
+#: ../plugin.php:207
 msgid "This post was written by "
 msgstr ""
 

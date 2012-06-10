@@ -3,7 +3,7 @@
 A simple plugin used to demonstrate how to use Ajax in WordPress development.
 
 * Version 0.5 provides the basic foundation on the plugin using the typical model of saving options upon a POST
-* Version 1.0 implements Ajax functionality using the WordPress API
+* Version 1.0 implements Ajax functionality using the WordPress Ajax API
 
 ## Installation
 
@@ -22,7 +22,8 @@ _0.5_
 
 _1.0_
 
-* TODO
+* Implements Ajax functionality to asynchronously save the custom post meta. 
+* This functionality is used to demonstrate how to use the WordPress Ajax API.
 
 ## WordPress API References
 
@@ -32,3 +33,5 @@ Notable functions used throughout this plugin are:
 * [add_meta_box](http://codex.wordpress.org/Function_Reference/add_meta_box)
 * [the_author_meta](http://codex.wordpress.org/Function_Reference/the_author_meta)
 * [WP_Query](http://codex.wordpress.org/Class_Reference/WP_Query) 
+* [Ajax API](http://codex.wordpress.org/AJAX_in_Plugins)
+* [WP Ajax](http://codex.wordpress.org/Plugin_API/Action_Reference/wp_ajax_(action))

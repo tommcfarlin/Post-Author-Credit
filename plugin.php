@@ -50,6 +50,9 @@ class Post_Author_Credit {
 	    
 	    // Render the post author credit on the single post page
 	    add_action( 'the_content', array( &$this, 'post_author_credit' ) );
+	    
+	    // Add the action for saving the option via Ajax
+	    add_action( 'wp_ajax_save_post_author_credit', array( &$this, 'ajax_save_post_author_credit' ) );
 
 	} // end constructor
 	
@@ -108,7 +111,7 @@ class Post_Author_Credit {
 	
 	/*--------------------------------------------*
 	 * Core Functions
-	 *---------------------------------------------*/
+	 *--------------------------------------------*/
 	
 	/**
 	 * Add the post meta box to the post edit screen. This box will appear above all other options.
@@ -172,13 +175,16 @@ class Post_Author_Credit {
 
 		wp_nonce_field( plugin_basename( __FILE__ ), 'post_author_credit_nonce' );
 
-		$html .= '<input type="checkbox" id="post_author_credit" name="post_author_credit" value="1"' . checked( get_post_meta( $post->ID, 'post_author_credit', true ), 1, false ) . ' />';
+		$html .= '<input type="checkbox" id="post_author_credit_checkbox" name="post_author_credit" value="1"' . checked( get_post_meta( $post->ID, 'post_author_credit', true ), 1, false ) . ' />';
 	
 		$html .= '&nbsp;';
 	
-		$html .= '<label for="post_author_credit">';
+		$html .= '<label>';
 			$html .= __( 'Display <a href="profile.php">author name &amp; email</a>?', 'post_author_credit' );
 		$html .= '</label>';
+		
+		// This nonce value is used for saving the option using the WordPress Ajax API
+		$html .= '<span id="ajax_post_author_credit_nonce" class="hidden">' . wp_create_nonce( 'ajax_post_author_credit_nonce' ) . '</span>';
 		
 		echo $html;
 		
@@ -210,6 +216,41 @@ class Post_Author_Credit {
 		return $content;
 		
 	} // end post_author_credit
+	
+	/*--------------------------------------------*
+	 * Ajax-specific functions
+	 *--------------------------------------------*/
+  
+	 /**
+	  * The Ajax request handler that is responsible for updating the post meta data when the user
+	  * clicks on the checkbox in the custom post meta box.
+	  */
+	 function ajax_save_post_author_credit() {
+
+		// Verify that the incoming request is coming with the security nonce
+		if( wp_verify_nonce( $_REQUEST['nonce'], 'ajax_post_author_credit_nonce' ) ) {
+		
+			// Set the value of the post meta based on the post data coming via the JavaScript
+			$post_author_credit = '';
+			if( isset( $_POST['post_author_credit'] ) && 'true' == $_POST['post_author_credit'] ) {
+				$post_author_credit = 1;
+			} // end if
+			
+			// Attempt to update the post meta data. If it succeeds, send 1; otherwise, send 0.
+			if( update_post_meta( $_POST['post_id'], 'post_author_credit', $post_author_credit ) ) {
+				die( '1' );
+			} else {
+				die( '0' );
+			} // end if/else
+			
+		} else {
+		
+			// Send -1 if the attempt to save via Ajax was completed invalid.
+			die( '-1' );
+			
+		} // end if 
+		 
+	 } // end ajax_save_post_author_credit
   
 } // end class
 new Post_Author_Credit();
