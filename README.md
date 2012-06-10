@@ -1,6 +1,6 @@
 # Post Author Credit
 
-A simple plugin used to demonstrate how to use Ajax in WordPress development.
+A simple plugin used to demonstrate how to use Ajax in WordPress development. Includes fully documented and localized code following WordPress coding conventions.
 
 * Version 0.5 provides the basic foundation on the plugin using the typical model of saving options upon a POST
 * Version 1.0 implements Ajax functionality using the WordPress Ajax API
