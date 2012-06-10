@@ -1,0 +1,10 @@
+#post-author-credit { 
+	border: 1px solid #ccc;
+	background: #eee;
+	padding: 12px;
+	margin-bottom: 12px;
+}
+
+#post-author-credit p {
+	margin: 0;
+}

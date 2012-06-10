@@ -1,0 +1,5 @@
+(function($) {
+	$(function() {
+		/* TODO */
+	});
+})(jQuery);
