@@ -16,6 +16,14 @@ View the [full article](http://tommcfarlin.com/wordpress-ajax-api).
 5. 	Navigate to any post page (new or existing) and the new feature will appear above the 'Publish' options
 6.	Activating the option will render a new content box above post content
 
+## Screenshots
+
+http://tommcfarlin.com/wp-content/uploads/2012/06/Screen-Shot-2012-06-11-at-9.49.29-AM-768x603.png
+Post Editor with custom meta boxes
+
+http://tommcfarlin.com/wp-content/uploads/2012/06/Screen-Shot-2012-06-11-at-9.51.22-AM-768x594.png
+Public-facing view of the theme
+
 ## Changelog
 
 _0.5_
