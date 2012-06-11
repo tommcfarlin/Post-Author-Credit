@@ -5,6 +5,8 @@ A simple plugin used to demonstrate how to use Ajax in WordPress development. In
 * Version 0.5 provides the basic foundation on the plugin using the typical model of saving options upon a POST
 * Version 1.0 implements Ajax functionality using the WordPress Ajax API
 
+View the [full article](http://tommcfarlin.com/wordpress-ajax-api).
+
 ## Installation
 
 1.	Download a copy of the plugin
@@ -34,4 +36,4 @@ Notable functions used throughout this plugin are:
 * [the_author_meta](http://codex.wordpress.org/Function_Reference/the_author_meta)
 * [WP_Query](http://codex.wordpress.org/Class_Reference/WP_Query) 
 * [Ajax API](http://codex.wordpress.org/AJAX_in_Plugins)
-* [WP Ajax](http://codex.wordpress.org/Plugin_API/Action_Reference/wp_ajax_(action))
+* [WP Ajax](http://codex.wordpress.org/Plugin_API/Action_Reference/wp_ajax_(action)
