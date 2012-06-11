@@ -18,9 +18,11 @@ View the [full article](http://tommcfarlin.com/wordpress-ajax-api).
 
 ## Screenshots
 
-![Post Editor with custom meta boxes](http://tommcfarlin.com/wp-content/uploads/2012/06/Screen-Shot-2012-06-11-at-9.49.29-AM-768x603.png "Post Editor with custom meta boxes.")
+[Post Editor with custom meta boxes](http://tommcfarlin.com/wp-content/uploads/2012/06/Screen-Shot-2012-06-11-at-9.49.29-AM-768x603.png "Post Editor with custom meta boxes.")
+Post Editor with custom meta boxes
 
-![Public-facing view of the theme](http://tommcfarlin.com/wp-content/uploads/2012/06/Screen-Shot-2012-06-11-at-9.49.29-AM-768x603.png "Public-facing view of the theme.")
+[Public-facing view of the theme](http://tommcfarlin.com/wp-content/uploads/2012/06/Screen-Shot-2012-06-11-at-9.49.29-AM-768x603.png "Public-facing view of the theme.")
+Public-facing view of the theme
 
 ## Changelog
 
